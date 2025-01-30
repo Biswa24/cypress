@@ -434,6 +434,7 @@ export class ProjectBase extends EE {
             this.server.end(),
           ])
 
+          stats['stats']['specTimeout'] = !!(runnable.specTimeout)
           this.emit('end', stats)
         }
 
